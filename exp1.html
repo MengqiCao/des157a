@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 1</title>
+</head>
+<body>
+    <h1>Experiment 1</h1>
+    <h2>Open the console to see the functionality of the code.</h2>
+</body>
+
+<script>
+/*     var text = "ABCDE";
+    var lowercaseText = text.toLowerCase();
+    console.log(lowercaseText); */
+
+/*     var text = "how are you doing?";
+    var changeText = text.toUpperCase();
+    console.log(changeText); */
+
+ /*    var text = "how are you doing?";
+    var changeText = text.charAt(0).toUpperCase()+text.slice(1);
+    console.log(changeText) */
+
+    var text = "how are you doing?";
+    var changeText = text.split(" ");
+    for(var i=0; i<changeText.length; i++){
+        var uptext = changeText[i].charAt(0).toUpperCase() + changeText[i].slice(1);
+        changeText[i] = uptext;
+    }
+    changeText = changeText.join(' ');
+    console.log(changeText);
+</script>
+</html>
