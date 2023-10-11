@@ -1,18 +1,12 @@
+html{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 body{
     width: 1200px;
-}
-
-#heading{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-}
-
-#banner{
-    width: 1200px;
-    height: 250px;
-    background-color:#F7F7F9 ;
+    font-family: 'Poppins', sans-serif;
 }
 
 main {
@@ -20,12 +14,152 @@ main {
     justify-content: space-between;
 }
 
-ul {
-    list-style-type: none;
+
+/* heading */
+#heading{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: #8E8EBA;
+    font-weight: 600;
+    font-size: 16px;
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
 }
+
+.floating {
+    display: inline-block; /* So transform can be applied */
+    animation: float 2s infinite; /* 2 seconds duration, infinite means it will keep repeating */
+}
+
+
+/* Banner */
+#banner{
+    width: 1200px;
+    height: 250px;
+    background-color:#F7F7F9 ;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    gap: 10px;
+}
+
+.front{
+    display: flex;
+}
+
+.front img, .back img {
+    border-radius: 10px;
+}
+
+/* animation */
+
+.card {
+    perspective: 1000px; 
+    width: 155px; 
+    height: 195px;
+    position: relative;
+}
+
+.front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s;
+}
+
+.front {
+    z-index: 2; 
+    transform: rotateY(0deg);
+}
+
+.back {
+    transform: rotateY(180deg); 
+}
+
+.card:hover .front {
+    transform: rotateY(180deg); 
+}
+
+.card:hover .back {
+    transform: rotateY(360deg); 
+}
+
+
+ /* Section */
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F7F7F9;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px; 
+    width: 100%; 
+    height: 330px;
+    max-width: 300px;
+}
+
+section h2{
+    font-size: 16px;
+    font-weight: 600;
+    color: #363636;
+}
+
+section ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+    gap:12px;
+}
+
+section a{
+    text-decoration: none;
+    color:#716F70 ;
+}
+
+a:hover{
+    background-color: #E4E4FF;
+}
+
+.frame{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* footer */
+footer {
+    display:flex;
+    justify-content: space-between;
+    padding: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1em;
+    color: #8E8EBA;
+}
+
+footer a {
+    text-decoration: none;
+    color: #8E8EBA;
+}
+
+footer a:hover {
+    text-decoration: underline #8E8EBA;
+}
+
+
