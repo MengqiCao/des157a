@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Experiement 2</title>
+    <style>
+
+    </style>
+</head>
+
+
+<body>
+    <h1>Experiement 2</h1>
+    <p>Click the button below to change the background color to your favorite color.</p>
+    <button onclick="changeBackgroundColor()">Change Background Color</button>
+    <button onclick="randomBackgroundColor()">Random Background Color</button>
+    
+
+    <script>
+        // Function to change the background color
+        function changeBackgroundColor() {
+            // List of available colors
+            var colors = ["red", "blue", "green", "yellow", "orange", "purple", "pink"];
+
+            // Prompt the user to select a color
+            var userColor = prompt("Choose your favorite color from the list: " + colors.join(", ")).toLowerCase();
+
+            // Check if the user's input is in the list of colors
+            if (colors.includes(userColor)) {
+                // Change the background color
+                document.body.style.backgroundColor = userColor;
+                alert("Background color changed to " + userColor + "!");
+            } else {
+                alert("Sorry, that color is not in the list. Please choose a color from the list.");
+            }
+        }
+
+        function randomInt(min, max) {
+            return Math.floor((max - min + 1) * Math.random()) + min;
+        }
+
+        function getRandomColor() {
+            // Generate random RGB values
+            var red = randomInt(0, 255);
+            var green = randomInt(0, 255);
+            var blue = randomInt(0, 255);
+
+            // Create a CSS color string
+            return `rgb(${red}, ${green}, ${blue})`;
+        }
+
+        function randomBackgroundColor() {
+            var randomColor = getRandomColor();
+
+            // Set the background color
+            document.body.style.backgroundColor = randomColor;
+
+        }
+
+        //For this code, I began by implementing a feature that allows users to select a color from a list and then changes the background color of the page accordingly. To enhance user experience, I added error messages to remind users when they haven't selected a color from the list. I thought it would also be fun to let users change background randomly, so I tried methods I learned in Processing, assign the random integer to RGB number, it actually worked! This is so fun!
+
+    </script>
+</body>
+</html>
+
+
+
+</html>
