@@ -11,35 +11,53 @@
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poller+One&display=swap" rel="stylesheet">
 </head>
 
 <body class="flex-wrapper">
-
-    <div class="inputbox">
+    
         <header class="header-text">
+            <img src="./images/headerimg.png" alt="header image" width="50%">
             <h1>Create Your Pixel Pet</h1>
         </header>
 
+    <div class="inputbox">
         <main class="inputButton"> 
-            <form>
-                <label for="adjective1">adjective:</label><br>
+            <form class="custom-form">
+
+                <div class="form-wrapper">
+                <div class="form-column">
+                <label for="petname">Pet name:</label><br>
+                <input type="text" name="petname" id="petname" required><br>
+
+                <label for="adjective1">Adjective:</label><br>
                 <input type="text" name="adjective1" id="adjective1" required><br>
 
-                <label for="number1">number:</label><br>
-                <input type="text" name="number" id="number1" required><br>
+                <label for="verb_ing1">Verb ending in -ing:</label><br>
+                <input type="text" name="verb_ing" id="verb_ing" required><br>
 
-                <label for="verb1">verb:</label><br>
-                <input type="text" name="verb" id="verb1" required><br>
+                <label for="verb_ing2">Another verb ending in -ing:</label><br>
+                <input type="text" name="verb_ing2" id="verb_ing2" required><br>
 
-                <label for="noun1">noun:</label><br>
-                <input type="text" name="noun1" id="noun1" required><br>
+                <label for="color">Color:</label><br>
+                <input type="text" name="color" id="color" required><br>
+                </div>
 
-                <label for="location">destination:</label><br>
-                <input type="text" name="location" id="location" required><br>
 
+                <div class="form-column">
                 <label for="adjective2">adjective:</label><br>
                 <input type="text" name="adjective2" id="adjective2" required><br>
+
+                <label for="location">location:</label><br>
+                <input type="text" name="location" id="location" required><br>
+
+                <label for="verb1">verb:</label><br>
+                <input type="text" name="verb1" id="verb1" required><br>
+
+                <label for="ability">Special ability:</label><br>
+                <input type="text" name="ability" id="ability" required><br>
+                </div>
+                </div>
 
 
                 <div class="button">
@@ -48,6 +66,14 @@
             </form>
         </main>
     </div>
+
+    <section id="overlay" class="hidden">
+        <article>
+            <h2>Meet your pet!</h2>
+            <p id="storyText"></p>
+            <button class="close" onclick="closeOverlay()">close</button>
+        </article>
+    </section>
 
 </body>
 
