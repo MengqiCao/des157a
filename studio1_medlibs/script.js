@@ -23,11 +23,10 @@
         document.getElementById('overlay').classList.remove('hidden');
     });
 
-    document.querySelector('.close').addEventListener('click', closeOverlay);
-    
-    function closeOverlay() {
-        document.getElementById('overlay').classList.add('hidden');
-    }
+    document.querySelector('.close').addEventListener('click',function(event){
+        document.querySelector('#overlay').className=
+        'hidden';
+    });
     
 
 })();
