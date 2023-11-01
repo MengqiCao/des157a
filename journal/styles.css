@@ -1,0 +1,63 @@
+html{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+body{
+    width: 1200px;
+    font-family: 'Poppins', sans-serif;
+}
+
+#index_main {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* heading */
+#heading{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: #8E8EBA;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+
+/* learning journal */
+#learning_body{
+    font-family: 'Poppins', sans-serif;
+}
+
+
+#blog{
+    width: 70%;
+    max-width: 1200px;
+    margin: 4rem auto;
+}
+
+#article1, #article2, #article3, #article4 {
+    margin-top: 40px;
+    border-radius: 10px;
+    padding: 30px;
+    background-color:#F7F7F9;
+    position: relative;
+    color: #616161;
+    line-height: 1.6;
+}
+
+#title{
+    font-size: 20px;
+    color: #363636;
+    margin-top: 100px;
+}
+
+#article1 h2{
+    color: #363636;
+}
+
+
+
