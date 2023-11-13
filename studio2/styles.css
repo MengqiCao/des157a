@@ -1,34 +1,113 @@
+* {
+	box-sizing: border-box;
+}
+
 html{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #191919;
-    color: white;
+    background-color: #ffffff;
+    color: #333;
 }
-
-article{
-    display: flex;
-    font-size: 54px;
-    font-weight:900;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    margin: auto;
-    gap: 20px;
-    height: 100vh; 
-}
-
 
 body{
-    width: 1200px;
     font-family: 'Poppins', sans-serif;
 }
 
-#wrapper{
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-    gap: auto;
+main{
+    width: 30vw;
+    padding: 30px;
+}
+
+section {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+h1{
+    font-size: 30px;
+}
+
+
+p{
+    line-height: 1.5em;
+}
+
+figure{
+    display: block;
+    margin: 0;
+    width: 70vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+figure img{
+    position: absolute;
+    transition: all 3s ease;
+}
+
+
+/* Locate animals */
+
+.sect1{
+	width: 130vh;
+	top:0;
+	left: 0%;
+    transform:translateY(-10%);
+}
+
+
+.sect2,
+.sect3,
+.sect4,
+.sect5,
+.sect6,
+.sect7,
+.sect8{
+    width: 2000px;
+    transform: scale(1.4);
+}
+
+.sect2 {
+    top: calc(100% - 1800px);
+    left:600px;
+}
+
+.sect3 {
+    top: calc(100% - 1800px);
+    left: 300px;
+}
+
+.sect4 {
+	top: calc(100% - 1800px);
+    left: -100px;
+}
+
+.sect5 {
+    top: calc(100% - 1800px);
+    left: -500px;
+}
+
+.sect6 {
+    top: calc(100% - 1800px);
+    left: -900px;
+}
+
+.sect7 {
+    top: calc(100% - 1800px);
+    left: -1300px;
+}
+
+.sect8 {
+    top: calc(100% - 1800px);
+    left: -1700px;
+}
+
+.sect9 {
+    width: 130vh;
+	top:0;
+	left: 0%;
+    transform:translateY(-10%);
 }
