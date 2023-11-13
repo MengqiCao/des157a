@@ -58,6 +58,58 @@ figure img{
     transform:translateY(-10%);
 }
 
+figure figcaption{
+	width: 15%;
+	position: absolute;
+	left: 50%;
+	top: 150%;
+	transform: translateX(-50%);
+	background: rgba(255, 255, 255, 0.8);
+	border-radius: 10px;
+	padding: 20px;
+	line-height: 1.5em;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.start {
+	top: 150%;
+}
+
+.enter {
+	animation-name: movein;
+	animation-delay: .5s;
+	animation-duration: 700ms;
+	animation-fill-mode: forwards;
+	animation-timing-function: cubic-bezier(0.075, 0.820, 0.165, 1.000);	
+}
+
+.exit {
+	animation-name: moveout;
+	animation-duration: 700ms;
+	animation-fill-mode: forwards;
+	animation-timing-function: cubic-bezier(0.600, 0.040, 0.980, 0.335);
+}
+
+@keyframes movein {
+	0%{
+		top: 105%;
+	}
+	100% {
+		top: 50%;
+	}
+}
+
+@keyframes moveout {
+	0%{
+		top: 50%;
+	}
+	100% {
+		top: -20%;
+	}
+}
+
 
 .sect2,
 .sect3,

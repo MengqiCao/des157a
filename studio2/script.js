@@ -1,5 +1,28 @@
+(function () {
+	'use strict';
+
+	
+	const captions = [
+		
+		'',
+		'🐰🐱🐶🐧🐑🐷🐻',
+		'🐰🐰🐰🐰',
+		'🐱🐱🐱🐱',
+		'🐶🐶🐶🐶',
+		'🐧🐧🐧🐧',
+		'🐑🐑🐑🐑',
+		'🐷🐷🐷🐷',
+		'🐻🐻🐻🐻',
+		];
+
+	let figCaption = document.querySelector('figcaption');
+	figCaption.innerHTML = captions[1];
+
+
 
 window.addEventListener('load', function () {
+
+
 
 	const posts = document.querySelectorAll('section');
 	let postTops = [];
@@ -28,6 +51,25 @@ window.addEventListener('load', function () {
 		if (counter != prevCounter) {
 			
 			document.querySelector('figure img').className = 'sect' + counter;
+
+			figCaption.className = 'exit';
+
+			// this event handler runs when the CSS animation finishes
+			figCaption.addEventListener('animationend', function () {
+				// Clone the figcaption
+				let newCaption = document.querySelector('figcaption').cloneNode(true);
+				// remove the original figcaption
+				figCaption.remove();
+				// add a class name to the new fig caption (the one that was cloned)
+				newCaption.className = 'enter';
+				// change the caption based on which section is on the screen
+				newCaption.innerHTML = captions[counter];
+				// put the new caption on the page
+				document.querySelector('figure').appendChild(newCaption);
+				// reassign the figCaption variable
+				figCaption = document.querySelector('figcaption');
+			});
+
 			prevCounter = counter;
 		}
 
@@ -56,3 +98,5 @@ window.addEventListener('load', function () {
 	}
 
 }); 
+
+})();
