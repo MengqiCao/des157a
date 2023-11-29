@@ -42,8 +42,8 @@
     // Event Listener for Form Submission
     document.querySelector("form").addEventListener("submit", function (event) {
       event.preventDefault();
-      let player1Name = document.querySelector("#player1").value;
-      let player2Name = document.querySelector("#player2").value;
+      let player1Name = document.querySelector("#player1name").value;
+      let player2Name = document.querySelector("#player2name").value;
   
       document.querySelector("#player1Name").textContent = player1Name;
       document.querySelector("#player2Name").textContent = player2Name;
