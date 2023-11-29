@@ -1,48 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <!-- Character Set and Viewport Configuration -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
-    <title>Every Picture</title>
+
+    <!-- Page Title -->
+    <title>Game of Pig</title>
+
+    <!-- External Scripts and Stylesheets -->
     <script src="script.js" defer></script>
     <link href="styles.css" rel="stylesheet">
 
-    <!-- fonts -->
+    <!-- Google Fonts Integration -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
 </head>
 
-
 <body>
+    <!-- Page Header -->
     <header>
         🐷 The Game Of Pig 🐷
     </header>
+
+    <!-- Main Content Area -->
     <main>
-
-        <section class="game-description">
-            <p>There are two players. The player whose turn it is rolls the dice. The total of the roll is added to the current player's score, unless either die comes up as a "one". If this happens, this player's turn is over, and it is the other player’s turn. After each roll, the current player can either roll again, (assuming a "one" was not rolled) or if the current player feels that luck is running thin, they can pass to the other player. The first player to get 30 points or higher wins.</p>
-            <p>Oh, and if you roll two "ones" (snake eyes), your current score gets zeroed out. So don’t do that.</p>
-        </section>
-
-        <section class="game-setup">
-            <section class="player_wrapper">
-            <div class="player-input">
-                <img src="images/pig1.png" alt="pig1">
-                <label for="player1">Player 1</label>
-                <input type="text" id="player1" placeholder="Enter name">
-            </div>
-            <div class="player-input">
-                <img src="images/image 2.png" alt="pig2">
-                <label for="player2">Player 2</label>
-                <input type="text" id="player2" placeholder="Enter name">
-            </div>
+        <!-- Game Instructions -->
+        <section id="first" class="showing">
+            <section class="game-description">
+                <p>There are two players. The player whose turn it is rolls the dice. The total of the roll is added to
+                    the current player's score, unless either die comes up as a "one". If this happens, this player's
+                    turn is over, and it is the other player’s turn. After each roll, the current player can either roll
+                    again, (assuming a "one" was not rolled) or if the current player feels that luck is running thin,
+                    they can pass to the other player. The first player to get 30 points or higher wins.</p>
+                <p>Oh, and if you roll two "ones" (snake eyes), your current score gets zeroed out. So don’t do that.
+                </p>
             </section>
-            <button id="start-game">Start</button>
+
+            <!-- Player Setup Form -->
+            <form>
+                <section class="game-setup">
+                    <section class="player_wrapper">
+                        <!-- Player 1 Input -->
+                        <div class="player-input">
+                            <img src="images/pig1.png" alt="pig1">
+                            <label for="player1">Player 1</label>
+                            <input type="text" id="player1" placeholder="Enter name" required>
+                        </div>
+
+                        <!-- Player 2 Input -->
+                        <div class="player-input">
+                            <img src="images/pig2.png" alt="pig2">
+                            <label for="player2">Player 2</label>
+                            <input type="text" id="player2" placeholder="Enter name" required>
+                        </div>
+                    </section>
+
+                    <!-- Start Game Button -->
+                    <input value="Start Game" type="submit" class="button" id="startgame">
+                </section>
+            </form>
         </section>
 
+        <!-- Game Area (Hidden Initially) -->
+        <div id="gameArea" style="display: none;">
+            <!-- Player 1 Display -->
+            <div class="player" id="player1">
+                <img src="images/pig1.png" alt="Player 1" width="150p">
+                <div class="name" id="player1Name"></div>
+                <div class="score" id="player1Score"></div>
+            </div>
+        
+            <!-- Game Actions and Dice Area -->
+            <div id="action">
+                <div class="diceArea">
+                    <div class="gameMessages" id="gameMessages"></div>
+                    <div id="game"></div>
+                    
+                    <!-- Dice Display -->
+                    <div class="diceDisplay" id="diceDisplay">
+                        <!-- Dice images will be inserted here by JavaScript -->
+                    </div>
+                    <div id="actions"></div>
+                </div>
+
+                <!-- Quit Game Button -->
+                <button id="quit">Quit</button>
+            </div>
+
+            <!-- Player 2 Display -->
+            <div class="player" id="player2">
+                <img src="images/pig2.png" alt="Player 2" width="150px">
+                <div class="name" id="player2Name"></div>
+                <div class="score" id="player2Score"></div>
+            </div>
+        </div>
     </main>
 </body>
-
 </html>

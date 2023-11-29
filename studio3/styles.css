@@ -1,3 +1,4 @@
+/* Global Styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -5,63 +6,71 @@
     font-family: 'poppins', sans-serif;
 }
 
-body, html {
+/* Body Styling */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
     height: 100%;
-    max-width: 1400px;
-    background-color: #f9d6e4;
+    width: 100vw;
+    background-color: #F5DFDA;
 }
 
+/* Header Styling */
 header {
-    text-align: center;
-    font-size: 2rem;
+    font-family: 'Pixelify Sans', sans-serif;
+    font-size: 40px;
     margin: 2rem 0;
-    color: #333; 
+    margin-bottom: 3rem;
+    color: #DB826D; 
 }
 
+/* Main Section Styling */
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    gap: 1rem;
-    margin: 2rem 140px; 
-    max-width: calc(100vw - 280px); 
+    margin: auto; 
+    max-width: 1200px; 
 }
 
+/* Game Description Section Styling */
 .game-description {
+    padding: 20px;
     text-align: left;
-    margin-bottom: 2rem;
-    color: #333; 
+    margin-bottom: 1rem;
+    color: #c66651; 
+    font-weight: 500;
+    background-color: #FFD991;
+    border-radius: 8px;
 }
 
-.game-setup {
+/* Game Setup and Form Styling */
+.game-setup, form {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
     width: 100%;
     max-width: 1000px; 
-    background: #ffffff; 
-    padding: 2rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    border-radius: 10px; 
+    padding: 1rem;
 }
 
-.player_wrapper{
+/* Player Wrapper Styling */
+.player_wrapper {
     display: flex;
     justify-content: space-around;
     width: 100%;
 }
 
-.player-input {
-    margin-bottom: 1rem;
-}
-
+/* Player Input Label Styling */
 .player-input label {
     display: block;
     margin-bottom: .5rem;
 }
 
+/* Player Input Field Styling */
 .player-input input {
     width: 100%;
     padding: .5rem;
@@ -69,10 +78,12 @@ main {
     border-radius: 5px;
 }
 
-#start-game {
+/* Start Game Button Styling */
+#startgame {
+    margin-top: 3em;
     width: 50%;
     padding: 1rem;
-    background-color: #ff91a4; 
+    background-color: #DB826D; 
     border: none;
     border-radius: 5px;
     color: white;
@@ -82,7 +93,81 @@ main {
 }
 
 #start-game:hover {
-    background-color: #ec6a87; 
+    background-color: #c47361; 
 }
 
+/* First Section Styling */
+#first {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+}
 
+/* Game Area Styling */
+#gameArea {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* Player Display Styling */
+.player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+
+/* Dice Area Styling */
+.diceArea {
+    height: 500px;
+    width: 500px; 
+    padding: 20px;
+    overflow: hidden; 
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    flex-wrap: wrap; 
+    border-radius: 10px;
+}
+
+/* Dice Images Styling */
+.diceArea img {
+    max-width: 100px;
+    max-height: 100px;
+    margin: 10px;
+}
+
+/* Dice Area Button Styling */
+.diceArea button {
+    padding: 10px;
+    margin: 5px;
+    /* Other button styles... */
+}
+
+/* General Button Styling */
+button {
+    padding: 10px;
+    background-color: #DB826D;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 20px;
+    padding: 10px;
+}
+
+/* Action Area Styling */
+#action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}

@@ -13,6 +13,7 @@
 		'🐑🐑🐑🐑',
 		'🐷🐷🐷🐷',
 		'🐻🐻🐻🐻',
+		'Thanks for watching :)',
 		];
 
 	let figCaption = document.querySelector('figcaption');
