@@ -1,0 +1,195 @@
+
+/* global elements */
+* {
+	box-sizing: border-box;
+}
+
+html{
+    background-color: #ffffff;
+    color: #333;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+main{
+    width: 30vw;
+    padding: 30px;
+}
+
+section {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+body {
+    transition: background-color 0.5s ease, background-image 1s ease;
+
+}
+
+p{
+    line-height: 1.5em;
+	font-family: 'Zilla Slab Highlight', serif;
+	font-weight: bold;
+	transition: color 1s ease;
+}
+
+
+/* headings */
+h1{
+    font-size: 30px;
+	font-family: 'Zilla Slab', serif;
+}
+
+/* section styles */
+.s1p{
+	font-family: 'Zilla Slab', serif;
+}
+
+
+
+
+
+figure{
+    display: block;
+    margin: 0;
+    width: 70vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+figure img{
+    position: absolute;
+    transition: all 3s ease;
+}
+
+#btn-sect2{
+background-image: url('images/buttonrab.svg');
+}
+
+#btn-sect3{
+	background-image: url('images/buttoncat.svg');
+}
+
+#btn-sect4{
+	background-image: url('images/buttondog.svg');
+}
+
+#btn-sect5{
+	background-image: url('images/buttonpen.svg');
+}
+
+#btn-sect6{
+	background-image: url('images/buttonlamb.svg');
+}
+
+#btn-sect7{
+	background-image: url('images/buttonpig.svg');
+}
+
+#btn-sect8{
+	background-image: url('images/buttonbear.svg');
+}
+
+/* buttons */
+.navigation-buttons button {
+	/* Basic button reset */
+	background: none;
+	border: none;
+	cursor: pointer;
+  
+	/* Custom styles */
+	display: inline-block;
+	padding: 10px 20px;
+	margin: 5px;
+	border-radius: 5px;
+	transition: background-color 0.3s, transform 0.3s;
+  
+	/* Add your own design elements */
+	background-size: contain;
+	background-position: center;
+  	background-repeat: no-repeat;
+	text-indent: -9999px; /* Hide the text if using an image */
+  }
+
+  .navigation-buttons button:hover {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius: 60%;
+	transform: translateY(-2px);
+  }
+
+
+
+
+
+
+
+
+/* Locate animals */
+
+.sect1{
+	width: 130vh;
+	top:0;
+	left: 0%;
+    transform:translateY(-10%);
+}
+
+
+.sect2,
+.sect3,
+.sect4,
+.sect5,
+.sect6,
+.sect7,
+.sect8{
+    width: 2000px;
+    transform: scale(1.4);
+}
+
+.sect2 {
+    top: calc(100% - 1800px);
+    left:600px;
+}
+
+.sect3 {
+    top: calc(100% - 1800px);
+    left: 300px;
+}
+
+.sect4 {
+	top: calc(100% - 1800px);
+    left: -100px;
+}
+
+.sect5 {
+    top: calc(100% - 1800px);
+    left: -500px;
+}
+
+.sect6 {
+    top: calc(100% - 1800px);
+    left: -900px;
+}
+
+.sect7 {
+    top: calc(100% - 1800px);
+    left: -1300px;
+}
+
+.sect8 {
+    top: calc(100% - 1800px);
+    left: -1700px;
+}
+
+.sect9 {
+    width: 130vh;
+	top:0;
+	left: 0%;
+    transform:translateY(-10%);
+}
