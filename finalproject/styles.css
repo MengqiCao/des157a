@@ -69,31 +69,31 @@ figure img{
     transition: all 3s ease;
 }
 
-#btn-sect2{
-background-image: url('images/buttonrab.svg');
+.navigation-buttons .btn.btn-sect2 { 
+	background-image: url('images/buttonrab.svg'); 
 }
 
-#btn-sect3{
+.navigation-buttons .btn.btn-sect3{
 	background-image: url('images/buttoncat.svg');
 }
 
-#btn-sect4{
+.navigation-buttons .btn.btn-sect4{
 	background-image: url('images/buttondog.svg');
 }
 
-#btn-sect5{
+.navigation-buttons .btn.btn-sect5{
 	background-image: url('images/buttonpen.svg');
 }
 
-#btn-sect6{
+.navigation-buttons .btn.btn-sect6{
 	background-image: url('images/buttonlamb.svg');
 }
 
-#btn-sect7{
+.navigation-buttons .btn.btn-sect7{
 	background-image: url('images/buttonpig.svg');
 }
 
-#btn-sect8{
+.navigation-buttons .btn.btn-sect8{
 	background-image: url('images/buttonbear.svg');
 }
 
@@ -123,10 +123,6 @@ background-image: url('images/buttonrab.svg');
 	border-radius: 60%;
 	transform: translateY(-2px);
   }
-
-
-
-
 
 
 

@@ -79,11 +79,10 @@ window.addEventListener('load', function () {
 
 	}
 
-	document.querySelectorAll('.navigation-buttons button').forEach(button => {
+	document.querySelectorAll('.navigation-buttons .btn').forEach(button => {
 		button.addEventListener('click', function() {
 		  const targetId = this.getAttribute('data-target');
 		  const targetSection = document.getElementById(targetId);
-	  
 		  targetSection.scrollIntoView({ behavior: 'smooth' });
 		});
 	  });
